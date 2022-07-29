@@ -1,0 +1,42 @@
+<?php
+
+include "upload.php";
+?>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/6c36406174.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" type="text/css" href="../style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+</head>
+<body>
+  <div class="container">
+    <h1>upload image</h1>
+    <div class = "wrapper">
+<?php if(!empty($statusMsg)){?>
+  <p class="status <?php echo $status; ?>"><?php echo $statusMsg; ?></p>
+
+<?php } ?>
+
+    <form action="" method="post" enctype="multipart/form-data">
+      <div class= "form-control">
+      <label for ="image">Select Image File:</label>
+    <input type="file" name="image" class= "form-control">
+</div>
+    <input type="submit" name="submit" class="btn btn-primary" value="Upload">
+</form>
+<a href="view_image.php">view uploaded image</a>
+
+</div>
+</div>
+</body>
+</html>
+
